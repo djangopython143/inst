@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+<html>
+<head>
+    {% block title %}
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    {% endblock %}
+{% load staticfiles %}
+</head>
+<body>
+{% block content %}
+<style>
+#p1{text-indent: 50px}
+p{text-align: justify;font-size: 16px; font-family: "Verdana";line-height: 2;
+margin: 20px;color: blue}
+#div1 p{color: blue}
+#h31{color: green;text-decoration: underline}
+img{width: 200px;height: 242px}
+.pcls{margin: 0px}
+.bcls{color: black}
+h3,h5{color: deeppink}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h3 id="h31">About the Founder</h3>
+            <p id="p1"><b>Mr A. Yogi </b> ( M.Sc), PostGraduate from Telangana University and
+                then started working as Associate Technical support
+                from TechMahindra.</p>
+            <p>After few years of working found that there is a BIG GAP between what
+                Corporates want and what candidate’s posses.</p>
+            <p>After seeing this situation, Immediately he quit the Job and conducted
+                a research across institutions, industry and students, for 8 months and
+                realised students are gems, but lack of innovative things they failed,
+                So he started <b>“DJANGOSOFT SOLUTIONS”</b> for very less price in the market
+                and to enhance the quality of people in to Corporate field by giving best
+                knowledge to students via teaching and skill development.</p>
+            <p>After years of struggle, he was succeeded in that and giving Knowledge
+                as well as innovative thoughts to enter in corporate field for
+                lakhs of students in a span of 8 years and Now his dreams come true
+                that his students enters in to the corners of whole world and became
+                <b>INDIA’S NO #1 in SOFTWARE TRAINING INDUSTRY</b> as <b>DJANGOSOFT.</b></p>
+
+        </div>
+        <div id="div1" class="col-md-offset-1 col-md-2">
+            <img src="{% static "PHOTO1.jpg" %}">
+            <h3><b>A.Yogi</b></h3>
+            <h5><b>Python Web Developer</b></h5>
+            <p class="pcls"><b class="bcls">Parents:</b>A.Venkanna,Ramana</p>
+            <p class="pcls"><b class="bcls">Address:</b>Suryapet,Telangana</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+</body>
+</html>
