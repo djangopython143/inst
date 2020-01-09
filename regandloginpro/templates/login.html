@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    form{border: 1px cyan;padding: 10px;background-color: lightgray;border-radius: 10px }
+    body{background-color: lightcyan}
+</style>
+<body>
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="offset-6 col-md-4">
+            <form method="post">
+                {% csrf_token %}
+                <h3 style="text-align: center ;color: red">Login here..</h3>
+                <b>{{ lform.as_p }}</b><br>
+
+                <center>
+                    <input type="submit" value="Login" class="btn btn-success" style="margin-right: 100px">
+                    <input type="reset" value="Clear" class="btn btn-danger"><br><br>
+                    <b style="margin-right: 10px">If Not a member</b><a href="/registration/">create account</a>
+                </center>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
